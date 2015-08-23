@@ -54,4 +54,4 @@ totaldata.melted <- melt(totaldata, id = c("subject", "activity"))
 totaldata.mean <- dcast(totaldata.melted, subject + activity ~ variable, mean)
 
 
-write.table(totaldata.mean, file = "./tidy_data.txt")
+write.table(totaldata.mean, file = "./tidy_data.txt", row.name=FALSE)
